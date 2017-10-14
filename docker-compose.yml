@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  # The base service provides a PHP7.1 FPM server with Phalcon installed
+  php:
+      image: bwinkers/docker-php7-phalcon   
