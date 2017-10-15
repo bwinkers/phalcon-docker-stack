@@ -1,0 +1,8 @@
+version: '2'
+# Overrides for core Phalcon PHP7.1-FPM container
+services:
+  
+  php:
+      volumes:
+          - ./activerules:/var/www/html
+          - /data/cache:/var/www/html/cache   

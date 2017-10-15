@@ -1,0 +1,13 @@
+version: '2'
+services:
+  adminer:
+      image: adminer
+      restart: always
+      ports:
+          - 8881:8080
+  logger:
+      image: gliderlabs/logspout
+      ports:
+          - "8882:80"
+      volumes:
+          - /var/run/docker.sock:/var/run/docker.sock        

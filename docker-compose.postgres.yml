@@ -1,0 +1,23 @@
+version: '2'
+services:
+
+  php:
+      links:
+          - postgres
+          
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+        POSTGRES_PASSWORD: FZrtTASY8e3jmwjkK
+        POSTGRES_USER: activerules
+        POSTGRES_DB: activerules
+    volumes:
+          - /data/postgresql:/var/lib/postgresql/data
+    ## Uncomment if you want to be able to connect directly to your DB
+    #ports:
+    #  - "5432:5432"
+  adminer:
+      links:
+        - postgres
+     

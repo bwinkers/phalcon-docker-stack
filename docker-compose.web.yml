@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+      image: nginx:latest
+      ports:
+          - "8880:80"
+      volumes:
+          - ./activerules:/var/www/html
+          - ./site.conf:/etc/nginx/conf.d/default.conf
+          - /data/cache:/var/www/html/cache
+      links:
+          - php
+  php:  
