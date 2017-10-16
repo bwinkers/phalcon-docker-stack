@@ -1,5 +1,7 @@
 version: '2'
 services:
+  php:
+      image: bwinkers/docker-php7-phalcon-devtools  
   adminer:
       image: adminer
       restart: always
